@@ -34,6 +34,12 @@
 		if (empty($_POST["signupPassword"])){
 			$signupPassworderror="V2li on kohustuslik";
 			
+		} else {
+			
+			if(strlen($_POST ["signupPassword"]) < 8 ){
+				
+				$signupPassworderror = "Parool peab olema v2hemalt 8 m2rki";
+			}
 		}
 	}
 	
